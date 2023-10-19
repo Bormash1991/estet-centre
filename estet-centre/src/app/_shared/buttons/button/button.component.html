@@ -1,0 +1,12 @@
+<div class="button-wrapper">
+  <div
+    class="line"
+    *ngIf="line"
+  ></div>
+  <button
+    class="btn {{state}} {{size}}"
+    [ngStyle]="{minWidth}"
+  >
+    <ng-content></ng-content>
+  </button>
+</div>

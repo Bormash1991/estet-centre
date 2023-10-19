@@ -1,0 +1,29 @@
+.about-page {
+  .main-section {
+    height: 960px;
+    background: url("/assets/images/about.jpg") no-repeat center center / cover;
+    position: relative;
+    padding: 98px 0 0;
+
+    .about-box {
+      z-index: 10;
+      position: relative;
+
+      .title {
+        color: var(--nav-link-color);
+        font-size: 60px;
+        font-weight: 600;
+
+        span {
+          color: var(--gold-color);
+        }
+      }
+
+      .subtitle {
+        color: var(--nav-link-color);
+        font-weight: 600;
+        font-size: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,258 @@
+.main-page {
+  .logo-section {
+    height: 960px;
+    background: url("/assets/images/main-back.png") no-repeat center center / cover;
+    position: relative;
+    padding: 128px 0 0;
+
+    &-box {
+      position: relative;
+      z-index: 10;
+    }
+
+    .nav {
+      display: flex;
+      gap: 30px;
+
+      .link {
+        display: block;
+        text-decoration: none;
+        color: var(--nav-link-color);
+        font-weight: 500;
+        font-size: 23px;
+
+        &:after {
+          content: "";
+          display: block;
+          height: 1px;
+          width: 0%;
+          margin-top: 8.5px;
+          background-color: var(--nav-link-active);
+          transition: width 0.4s ease-in-out; /* Додаємо анімацію для ширини */
+        }
+
+        &:hover {
+          color: var(--nav-link-hover-color);
+
+          &:after {
+            width: 100%;
+          }
+        }
+
+        &-active {
+          &:after {
+            content: "";
+            display: block;
+            height: 1px;
+            width: 100%;
+            margin-top: 8.5px;
+            background-color: var(--nav-link-active);
+          }
+        }
+      }
+    }
+
+    .logo {
+      margin: 241px auto 0;
+      width: 744px;
+      height: 101px;
+      mask-image: url("/assets/images/logo.svg");
+      mask-size: auto;
+      background-color: var(--logo-light-color);
+    }
+
+    .text {
+      margin-top: 23px;
+      color: var(--nav-link-color);
+      font-size: 70px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      letter-spacing: 18.9px;
+      text-align: center;
+    }
+  }
+
+  .doctors {
+    padding: 100px 0 60px;
+    background-color: var(--main-back-color);
+
+    .content {
+      margin-top: 50px;
+      display: flex;
+      justify-content: space-between;
+
+      .card-box {
+        display: flex;
+        flex-direction: column;
+
+        .info {
+          text-align: center;
+          margin-top: 10px;
+
+          .name {
+            font-size: 30px;
+            font-weight: 500;
+          }
+
+          .specialization {
+            margin: 0 auto;
+            margin-top: 10px;
+            color: var(--light-text-color);
+            font-size: 25px;
+            font-weight: 300;
+            width: 300px;
+          }
+        }
+      }
+    }
+
+    .more-btn {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .reviews {
+    padding: 60px 0 100px;
+    background-color: var(--main-back-color);
+
+    .subtitle {
+      color: var(--button-green);
+      font-size: 30px;
+      font-weight: 500;
+      margin-top: 24px;
+      margin-bottom: 0;
+    }
+
+    .carousel {
+      width: 700px;
+      margin: 0 auto;
+      margin-top: 200px;
+
+      ::ng-deep {
+        .owl-item {
+          display: flex;
+          justify-content: center;
+        }
+
+        .owl-theme .owl-nav {
+          position: absolute;
+          width: calc(100% + 320px);
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          display: flex;
+          justify-content: space-between;
+          z-index: -1;
+
+          .owl-prev, .owl-next {
+            width: 70px;
+            height: 70px;
+            background-color: var(--carousel-navigation);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 60px;
+            font-weight: 200;
+            color: var(--main-black-color);
+
+            &:hover {
+              background-color: var(--carousel-navigation-hover);
+            }
+          }
+        }
+      }
+
+      .slide {
+        padding: 40px 20px;
+        width: 600px;
+        height: 332px;
+        background: var(--slide-back-color);
+        border-radius: 30px;
+        box-shadow: 0px 4px 0px 0px var(--border-black);
+        margin-bottom: 4px;
+
+        .name {
+          font-weight: 600;
+          font-size: 20px;
+        }
+
+        .stars {
+          margin-top: 40px;
+          display: flex;
+          gap: 4px;
+
+          .star {
+            background: url("/assets/icons/star.svg") no-repeat center center / cover;
+            height: 24px;
+            width: 24px;
+          }
+        }
+
+        .text {
+          font-size: 15px;
+          font-weight: 500;
+          line-height: 142.9%;
+          height: 63px;
+          margin-top: 40px;
+        }
+
+        .date {
+          margin-top: 40px;
+          color: var(--light-black-color);
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  .advantages {
+    padding: 100px 0;
+    background-color: var(--main-back-color);
+
+    .content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 65px;
+        margin-top: 75px;
+
+        .list-item {
+          display: flex;
+          gap: 58px;
+
+          .badge {
+            text-wrap: nowrap;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 45px;
+
+            span {
+              padding: 0 5px;
+            }
+          }
+
+          .text {
+            font-size: 23px;
+            font-weight: 400;
+            line-height: 45px;
+            max-width: 569px;
+
+            span {
+              font-weight: 700;
+            }
+
+          }
+        }
+      }
+    }
+  }
+}

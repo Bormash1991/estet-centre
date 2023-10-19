@@ -1,0 +1,52 @@
+.icon-wrapper {
+  //sizes
+  &.small {
+    .icon {
+      height: 24px;
+      width: 24px;
+      mask-size: 24px;
+    }
+  }
+
+  //conditions
+  &.active {
+    cursor: pointer;
+  }
+
+  //colors
+  &.white {
+    .icon {
+      background-color: var(--main-white-color);
+    }
+  }
+
+  .icon {
+    mask-position: center;
+    mask-repeat: no-repeat;
+    background-color: var(--main-black);
+
+    &.address {
+      mask-image: url("/assets/icons/map-pin.svg");
+    }
+
+    &.phone {
+      mask-image: url("/assets/icons/phone.svg");
+    }
+
+    &.email {
+      mask-image: url("/assets/icons/email.svg");
+    }
+
+    &.inst {
+      mask-image: url("/assets/icons/instagram.svg");
+    }
+
+    &.facebook {
+      mask-image: url("/assets/icons/facebook.svg");
+    }
+
+    &.tik-tok {
+      mask-image: url("/assets/icons/tik-tok.svg");
+    }
+  }
+}

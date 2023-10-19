@@ -1,0 +1,39 @@
+.button-wrapper {
+  position: relative;
+  width: fit-content;
+
+  .line {
+    border: 1px solid var(--button-green);
+    padding: 20px 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: -20px;
+    left: -20px;
+    right: 20px;
+  }
+
+  .btn {
+    height: 100px;
+    border: none;
+    border-radius: 4px;
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+
+
+    //size
+    &.big {
+      padding: 32px 0;
+      font-weight: 700;
+      font-size: 25px;
+    }
+
+    //state
+    &.green {
+      background-color: var(--button-green);
+      color: var(--white-color);
+      box-shadow: 0px 4px 10px 0px var(--dark-green-color);
+    }
+  }
+}

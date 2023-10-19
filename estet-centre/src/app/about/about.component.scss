@@ -3,26 +3,166 @@
     height: 960px;
     background: url("/assets/images/about.jpg") no-repeat center center / cover;
     position: relative;
-    padding: 98px 0 0;
+    padding: 98px 0 30px;
 
     .about-box {
       z-index: 10;
       position: relative;
+      display: flex;
+      height: 100%;
+      flex-direction: column;
 
-      .title {
-        color: var(--nav-link-color);
-        font-size: 60px;
-        font-weight: 600;
+      .box {
+        flex: 1 0 auto;
 
-        span {
-          color: var(--gold-color);
+        .title {
+          color: var(--nav-link-color);
+          font-size: 60px;
+          font-weight: 600;
+          margin-top: 180px;
+          margin-bottom: 13px;
+
+          span {
+            color: var(--gold-color);
+          }
+        }
+
+        .subtitle {
+          color: var(--nav-link-color);
+          font-weight: 600;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  .philosophy {
+    padding: 100px 0;
+    background-color: var(--main-back-color);
+
+    .content {
+      display: flex;
+      align-items: center;
+      gap: 100px;
+      margin-top: 100px;
+
+      .text {
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+
+        .text-box {
+          font-size: 30px;
+          font-weight: 300;
+
+          span {
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+
+  .history {
+    padding: 0 0 120px 0;
+    background-color: var(--main-back-color);
+
+    .content {
+      display: flex;
+      align-items: center;
+      gap: 100px;
+      margin-top: 50px;
+
+      .text {
+        font-size: 30px;
+        font-weight: 300;
+
+        .bottom-text {
+          margin-top: 100px;
+
+          span {
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+
+  .excellence {
+    padding: 0 0 100px 0;
+    background-color: var(--main-back-color);
+
+    .content {
+      .image-box {
+        position: relative;
+        padding: 50px;
+        margin: 85px auto 0;
+        max-width: 1100px;
+
+        .img {
+          display: block;
+          width: 1000px;
+          height: 649px;
+        }
+
+        .top {
+          position: absolute;
+          top: 0;
+          left: 0;
+
+          &:after {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 1px;
+            height: 201px;
+            background-color: black;
+          }
+
+          &:before {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 172px;
+            height: 0.5px;
+            background-color: black;
+          }
+        }
+
+        .bottom {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          transform: rotate(180deg);
+
+          &:after {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 172px;
+            height: 0.5px;
+            background-color: black;
+          }
+
+          &:before {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 0.5px;
+            height: 201px;
+            background-color: black;
+          }
         }
       }
 
-      .subtitle {
-        color: var(--nav-link-color);
-        font-weight: 600;
-        font-size: 20px;
+      .text {
+        font-weight: 300;
+        font-size: 30px;
+        margin-top: 62px;
+
+        span {
+          font-weight: 400;
+        }
       }
     }
   }

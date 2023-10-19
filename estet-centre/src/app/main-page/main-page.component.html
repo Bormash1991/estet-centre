@@ -1,0 +1,127 @@
+<div class="main-page">
+  <section class="logo-section">
+    <div class="overlay">
+    </div>
+    <div class="container logo-section-box">
+      <nav class="nav">
+        <a
+          class="link"
+          routerLink="about"
+        >Про Клініку</a>
+        <a
+          class="link"
+          routerLink="doctors"
+        >Наші лікарі</a>
+        <a
+          class="link"
+          routerLink="prices"
+        >Ціни</a>
+      </nav>
+      <div class="logo"></div>
+      <h1 class="text">Клініка, якій довіряють </h1>
+    </div>
+  </section>
+  <section class="doctors">
+    <div class="container">
+      <div class="title-box">
+        <h2 class="title">ЛІКАРІ КЛІНІКИ ЕСТЕТ ЦЕНТР</h2>
+        <div class="line"></div>
+      </div>
+      <div class="content">
+        <div
+          class="card-box"
+          *ngFor="let person of peopleData"
+        >
+          <app-frame-image
+            state="left"
+            height="600px"
+            width="400px"
+            [img]="person.img"
+          ></app-frame-image>
+
+          <div class="info">
+            <div class="name">
+              {{person.name}}
+            </div>
+            <div class="specialization">
+              {{person.specialization}}
+            </div>
+          </div>
+        </div>
+      </div>
+      <app-button
+        class="more-btn"
+        minWidth="313px"
+      >
+        Переглянути більше
+      </app-button>
+    </div>
+  </section>
+  <section class="reviews">
+    <div class="container">
+      <div class="title-box">
+        <h2 class="title">Радість починається з усмішки !</h2>
+        <div class="line"></div>
+      </div>
+      <h3 class="subtitle">
+        Сяйте здоров'ям та впевненістю завдяки нашій стоматологічній клініці!
+      </h3>
+    </div>
+    <div class="carousel">
+      <owl-carousel-o
+        [options]="carouselOptions"
+      >
+
+        <ng-container
+          *ngFor="let slide of slidesData"
+        >
+          <ng-template
+            carouselSlide
+          >
+            <div class="slide">
+              <div class="name">{{slide.name}}</div>
+              <div class="stars">
+                <div
+                  class="star"
+                  *ngFor="let _ of [1, 2, 3, 4, 5]"
+                ></div>
+              </div>
+              <div class="text">{{slide.text}}</div>
+              <div class="date">{{slide.date}}</div>
+            </div>
+          </ng-template>
+        </ng-container>
+
+      </owl-carousel-o>
+    </div>
+  </section>
+  <section class="advantages">
+    <div class="container">
+      <div class="title-box">
+        <h2 class="title">ПЕРЕВАГИ КЛІНІКИ ЕСТЕТ ЦЕНТР </h2>
+        <div class="line"></div>
+      </div>
+      <div class="content">
+        <app-frame-image
+          height="780px"
+          width="490px"
+          state="right"
+          img="/assets/images/advantages-img.jpg"
+        >
+        </app-frame-image>
+        <ul class="list">
+          <li
+            class="list-item"
+            *ngFor="let item of advantagesList; let i = index"
+          >
+            <div class="badge">. <span>{{i < 10 ? '0' + (i + 1) : i + 1}}</span> .</div>
+            <div class="text">
+              <span>{{item.title}}: </span>
+              {{item.text}}
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>

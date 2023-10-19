@@ -1,0 +1,21 @@
+.button-wrapper {
+  .btn {
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+
+    //size
+    &.small {
+      padding: 12px;
+    }
+
+    //state
+    &.light {
+      background-color: var(--btn-light);
+
+      &:hover {
+        background-color: var(--btn-light-hover);
+      }
+    }
+  }
+}

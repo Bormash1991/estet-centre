@@ -1,1 +1,57 @@
-/* You can add global styles to this file, and also import other style files */
+@import './assets/styles/variables';
+@import './assets/styles/normalize';
+@import './assets/styles/container';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,300;1,500&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+
+* {
+  font-family: 'Montserrat', 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.50);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.title-box {
+  display: flex;
+  gap: 50px;
+  align-items: flex-end;
+
+  .title {
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    text-wrap: nowrap;
+    margin: 0;
+  }
+
+  .line {
+    background-color: var(--dark-green-color);
+    height: 1px;
+    width: 100%;
+    margin-bottom: 7px;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-green-dark);
+  border-radius: 4px;
+}
+
+
+

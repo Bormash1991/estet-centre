@@ -1,0 +1,170 @@
+.image-wrapper {
+  position: relative;
+
+  &.left {
+    padding: 30px;
+    padding-right: 0;
+
+    .line {
+      right: 40px;
+
+      .left-part {
+
+        &:before {
+          height: 70px;
+          width: 1.5px;
+        }
+
+        &:after {
+          width: 70px;
+          height: 1px;
+        }
+      }
+
+      .right-part {
+        &:before {
+          width: 1.5px;
+          height: 0%;
+        }
+
+        &:after {
+          height: 1px;
+          width: 0%;
+        }
+      }
+    }
+  }
+
+  &.right {
+    padding: 30px;
+    padding-left: 0;
+
+    .line {
+      left: 40px;
+
+      .left-part {
+
+        &:before {
+          width: 1.5px;
+          height: 0%;
+        }
+
+        &:after {
+          height: 1px;
+          width: 0%;
+        }
+      }
+
+      .right-part {
+        &:before {
+          height: 70px;
+          width: 1.5px;
+        }
+
+        &:after {
+          width: 70px;
+          height: 1.5px;
+        }
+      }
+    }
+  }
+
+  &:hover {
+    .line {
+      opacity: 1;
+
+      .left-part {
+        &:before {
+          height: 100%;
+        }
+
+        &:after {
+          width: 100%;
+        }
+      }
+
+      .right-part {
+        &:before {
+          height: 100%;
+        }
+
+        &:after {
+          width: 100%;
+        }
+      }
+    }
+
+  }
+
+  .line {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 1;
+    transition: all .3s ease-in-out;
+    transition-delay: 1.4s;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border: 1.5px solid var(--border-black);
+    }
+
+    .left-part {
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: var(--border-green-dark);
+        transition: all .5s cubic-bezier(.35, .5, .64, .95);
+        height: 0;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: var(--border-green-dark);
+        transition: all .5s;
+        width: 0;
+      }
+    }
+
+    .right-part {
+
+      &:before {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background: var(--border-green-dark);
+        transition: all .5s cubic-bezier(.35, .5, .64, .95);
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background: var(--border-green-dark);
+        transition: all .5s;
+      }
+    }
+  }
+
+  .image {
+    height: auto;
+    width: auto;
+    position: relative;
+    z-index: 10;
+  }
+}

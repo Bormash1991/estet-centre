@@ -3,8 +3,94 @@
     <div class="overlay">
     </div>
     <div class="container about-box">
+      <div class="box">
       <h1 class="title">Про <span>клініку</span></h1>
       <div class="subtitle">Апрегейд твоєї впевненості</div>
+      </div>
+      <div class="navigation-bar">
+        <div class="prev" routerLink="/">{{'головна' | uppercase}}</div>
+        <div class="vector">-</div>
+        <div class="active">{{'про клініку' | uppercase}}</div>
+      </div>
+    </div>
+  </section>
+  <section class="philosophy">
+    <div class="container">
+      <div class="title-box">
+        <h2 class="title">ФІЛОСОФІЯ КЛІНІКИ </h2>
+        <div class="line"></div>
+      </div>
+      <div class="content">
+        <app-frame-image
+          height="710px"
+          width="480px"
+          state="right"
+          img="/assets/images/philosophy.jpg"
+        >
+        </app-frame-image>
+        <div class="text">
+          <div class="text-box">
+            <span>Естет Центр</span>
+            - це стоматологічна клініка з 20-ним досвідом та сформованою філософією.
+          </div>
+          <div class="text-box">
+            <span>Наша філософія</span>
+            - це людське та чуйне ставлення до пацієнтів, що сформувало бездоганну репутацію клініки.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="history">
+    <div class="container">
+      <div class="title-box">
+        <h2 class="title">ІСТОРІЯ</h2>
+        <div class="line"></div>
+      </div>
+      <div class="content">
+        <div class="text">
+          <div class="main-text">
+            Історія розпочалась у 2002 році зі стоматологічного кабінету «Естет», швидко розширюючи базу постійних
+            клієнтів,за рахунок високого професіоналізму лікарів, було прийнято рішення, побудувати нову, велику клініку
+            в центрі міста. Тож з 2008-го року зафункціонувала клініка під назвою «Естет Центр, сучасна стоматологія»,
+            яка за весь час роботи прийняла тисячі задоволених пацієнтів з різних міст України та зарубіжних країн.
+          </div>
+          <div class="bottom-text">
+            <span>
+              Головне досягнення
+            </span>
+            - це довіра наших клієнтів, побудована на чесності, відкритості та професіоналізмі.
+          </div>
+        </div>
+        <app-frame-image
+          height="800px"
+          width="500px"
+          state="left"
+          img="/assets/images/history.jpg"
+        >
+        </app-frame-image>
+      </div>
+    </div>
+  </section>
+  <section class="excellence">
+    <div class="container">
+      <div class="title-box">
+        <h2 class="title">ПРАГНЕННЯ ДОСКОНАЛОСТІ </h2>
+        <div class="line"></div>
+      </div>
+      <div class="content">
+        <div class="image-box">
+          <div class="top"></div>
+          <img src="/assets/images/excellence.jpg" alt="people" class="img">
+          <div class="bottom"></div>
+        </div>
+        <div class="text">
+          <span>«Естет Центр»</span>
+          - команда професійних лікарів з багаторічним досвідом роботи, які постійно розвиваються та
+          розширюють свої знання в дентальній медицині. Це фахівці, які надають стоматологічну допомогу на найвищому
+          рівні.
+        </div>
+      </div>
     </div>
   </section>
 </div>

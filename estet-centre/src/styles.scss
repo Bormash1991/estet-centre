@@ -44,6 +44,25 @@ html {
   }
 }
 
+.navigation-bar {
+  display: flex;
+  color: var(--nav-link-color);
+  font-size: 15px;
+
+  .vector {
+    padding: 0 4px;
+  }
+
+  .prev {
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .active {
+    font-weight: 700;
+  }
+}
+
 ::-webkit-scrollbar {
   width: 7px;
 }
